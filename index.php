@@ -81,6 +81,30 @@ $(document).ready(function(){
                 $('#msg').fadeOut("slow");
               }, 4000);
               setInterval('location.reload()', 4000);
+            }else if (data == 3) {
+              $("#submit").attr("disabled", false);
+
+              msg =
+                "<div>a varification mail has sent. please varify your mail id for better communication in future!!</div>";
+              $("#msg").fadeIn();
+              $('#msg').removeClass('error-msg').addClass('success-msg').html(data);
+              $("#msg").html(msg);
+              $("#contact-form").trigger("reset");
+              setTimeout(function () {
+                $('#msg').fadeOut("slow");
+              }, 4000);
+              setInterval('location.reload()', 4000);
+
+            } else if (data == 0) {
+              msg = "<div>fill all the fields!!</div>";
+              $("#msg").fadeIn();
+              $('#msg').removeClass('success-msg').addClass('error-msg').html(data);
+              $("#msg").html(msg);
+              $("#contact-form").trigger("reset");
+              setTimeout(function () {
+                $('#msg').fadeOut("slow");
+              }, 4000);
+              setInterval('location.reload()', 4000);
             }
 
           }
