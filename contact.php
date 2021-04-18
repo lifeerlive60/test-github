@@ -21,6 +21,8 @@ $name = $custData['name'];
 $email = $custData['email'];
 $mobile = $custData['mobile'];
 $query = $custData['query'];
+$varified = false;
+$token = bin2hex(random_bytes(50));
 
 if(isset($name) && isset($email) && isset($mobile)){
      $sql = "INSERT INTO `web-mail-clients`(`id`,`name`,`email`,`mobile`,`query`,`verified`,`token`) VALUES('$id','$name','$email','$mobile','$query','$varified','$token')";
