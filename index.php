@@ -52,8 +52,36 @@ $(document).ready(function(){
              url: "contact.php",
           method: "POST",
           data: JSON.stringify(custData),
+           beforeSend: function () {
+            $('.loading').fadeIn();
+            // $('#msg').removeClass('error-msg success-msg').addClass('process-msg').html(
+            // 'Loading response...');
+          },
           success: function(data){
               console.log(data)
+              $(".loading").fadeOut().hide();
+            if (data == 1) {
+              msg = "<div>You are already with us!!</div>";
+              $("#msg").fadeIn();
+              $('#msg').removeClass('success-msg').addClass('error-msg').html(msg);
+              // $("#msg").html(msg);
+              $("#contact-form").trigger("reset");
+              setTimeout(function () {
+                $('#msg').fadeOut("slow");
+              }, 4000);
+              setInterval('location.reload()', 4000);
+            } else if (data == 2) {
+              $("#submit").attr("disabled", true);
+              msg = "<div>Enter a Valid email id!!</div>";
+              $("#msg").fadeIn();
+              $('#msg').removeClass('success-msg').addClass('error-msg').html(data);
+              $("#msg").html(msg);
+              $("#contact-form").trigger("reset");
+              setTimeout(function () {
+                $('#msg').fadeOut("slow");
+              }, 4000);
+              setInterval('location.reload()', 4000);
+            }
 
           }
         })
