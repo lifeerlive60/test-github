@@ -345,7 +345,7 @@ $(document).ready(function(){
                   "price.php",
                   JSON.stringify(pack),
                   function (data) {
-                    // console.log(data);
+                    console.log(data);
                     $("#price-msg").fadeIn();
                     $("#msg").fadeOut("slow");
                     $('#price-msg').removeClass('error-msg').addClass('success-msg').html(data);

@@ -28,7 +28,8 @@ if(empty($name) || empty($email) && empty($mobile)){
     }
     else if(isset($email)){
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-        if(sentMail($myEmail,$myPassword,$email,$token,$message)){
+        // if(sentMail($myEmail,$myPassword,$email,$token,$message)){
+        if(true){
             $sql = "INSERT INTO `web-mail-clients`(`id`,`name`,`email`,`mobile`,`query`,`verified`,`token`) VALUES('$id','$name','$email','$mobile','$query','$varified','$token')";
             if($conn->query($sql)){
                    $msg = array(
