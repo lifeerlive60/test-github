@@ -163,8 +163,8 @@
 
     <!-- start card -->
 
-    <!-- <div class="container" style="display:none" id="con"> -->
-    <div class="container" id="con">
+    <div class="container" style="display:none" id="con">
+    <!-- <div class="container" id="con"> -->
 
       <div class="row">
         <h1>please choose one package</h1>
