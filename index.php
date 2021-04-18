@@ -13,6 +13,8 @@
                  <input type="tel" name="mobile" id="mobile" placeholder = "mobile" class="input-feild text-white" required>
                   <textarea name="query" id="query" placeholder = "query" class="input-feild text-white" required></textarea>
 
+                  <input class="submit-btn" type="button" name="submit" id="submit" value="Submit" />
+
 <script src="jquery.js"></script>
 
 <script>
