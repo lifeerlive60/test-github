@@ -1,4 +1,7 @@
 <?php
+require 'PHPMailerAutoload.php';
+require 'class.phpmailer.php';
+require 'class.smtp.php';
 
 $db_host = "sql6.freemysqlhosting.net";
 $db_user = "sql6406299";
